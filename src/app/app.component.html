@@ -1,3 +1,5 @@
-<h1>
-  {{title}}
-</h1>
+<section>
+    <input type="text" [(ngModel)]="unsafeIframeUrl" (keyup.enter)="setIframeUrl()">
+    <button (click)="setIframeUrl()">Go</button>
+</section>
+<iframe [src]="safeIframeUrl" frameborder="0"></iframe>
